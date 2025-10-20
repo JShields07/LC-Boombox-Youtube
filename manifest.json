@@ -1,0 +1,9 @@
+{
+  "name": "LC-Boombox-YouTube",
+  "version_number": "1.4.0",
+  "website_url": "https://github.com/JShields07/LC-Boombox-Youtube/tree/main",
+  "description": "Boombox streams from YouTube with no caching; posts links in in-game chat. Supports playlists & individual videos.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
