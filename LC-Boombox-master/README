@@ -1,0 +1,48 @@
+# Custom Boombox Music (YouTube Streaming Edition)
+
+A BepInEx mod for **Lethal Company** that lets the in-game boombox stream audio
+directly from YouTube — **no caching, no local files required**.
+
+When enabled, the mod uses `yt-dlp` and `ffmpeg` to live-decode YouTube audio
+and feed it directly into Unity’s audio system as a PCM stream.
+
+---
+
+## ✨ Features
+- Stream songs and playlists straight from YouTube
+- No temporary or cached files
+- Optional fallback to local MP3/OGG/WAV files
+- Displays all loaded YouTube links in the in-game chat
+- Posts “Now playing” messages with clickable YouTube URLs
+
+---
+
+## ⚙️ Setup
+
+### Requirements
+- **BepInEx 5+**
+- **yt-dlp** and **ffmpeg** installed (in PATH or with absolute paths in config)
+
+### Installation
+1. Drop the compiled `CustomBoomboxTracks.dll` into  
+   `Lethal Company/BepInEx/plugins/`
+2. Ensure `yt-dlp` and `ffmpeg` are accessible from the system PATH, or configure
+   them manually (see below).
+3. Start the game once — it will create  
+   `BepInEx/config/boombox.cfg`.
+
+---
+
+## 🧩 Configuration (`boombox.cfg`)
+
+```ini
+[Config]
+Use Default Songs = false
+Stream Audio From Disk = false
+
+[YouTube]
+UseYouTube = true
+PlaylistUrl =
+VideoUrlsCsv =
+YtDlpPath = yt-dlp
+FfmpegPath = ffmpeg
